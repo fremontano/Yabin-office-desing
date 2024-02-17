@@ -1,0 +1,99 @@
+/* Google Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --primary-color: #4555d2;
+    --secondary-color: #cc2973;
+    --light-color: #f9fafe;
+    --dark-color: #343a40;
+    --white-color: #fff;
+    --body-color: #494c52;
+
+    --navbar-padding-x: 0.8rem;
+    --navbar-padding-y: 1rem;
+    --link-font-weight: 700;
+}
+
+.xl-test {
+    font-size: 75px;
+}
+
+.line-height {
+    line-height: 1.7;
+}
+
+.font-weight {
+    font-weight: bold;
+}
+
+
+/* navabr  */
+
+.btn-outline-secondary {
+    color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+}
+
+header .decoration-start {
+    top: 80px;
+    left: -200px;
+    width: 500px;
+    opacity: 0.7;
+}
+
+header .decoration-start-2 {
+    top: 80px;
+    right: -200px;
+    width: 500px;
+    opacity: 0.7;
+}
+
+
+@media (max-width:992px) {
+    .xl-test {
+        font-size: 50px;
+    }
+
+    .btn-outline-secondary {
+        margin-top: 20px;
+    }
+
+    .header {
+        margin: 0 !important;
+        text-align: center;
+    }
+
+    header .decoration-start {
+        left: -100px;
+        width: 250px;
+    }
+
+    header .decoration-start-2 {
+        right: -100px;
+        width: 250px;
+    }
+
+}
+
+.navbar {
+    transition: all 0.5s ease-in-out;
+}
+
+/* Navar sticky  */
+.navbar-sticky {
+    background: #fff;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width:576px) {}
