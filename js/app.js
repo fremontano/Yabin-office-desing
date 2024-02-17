@@ -1,28 +1,33 @@
 function userScroll() {
     const counters = document.querySelectorAll('.counter');
+    const navbar = document.querySelector('.navbar');
+    const toTopBtn = document.querySelector('#to-top');
 
     window.addEventListener('scroll', () => {
-
         if (window.scrollY > 50) {
             navbar.classList.add('navbar-sticky');
+            toTopBtn.classList.add('show');
         } else {
             navbar.classList.remove('navbar-sticky');
+            toTopBtn.classList.remove('show');
         }
     });
-};
+}
 
+// scroll top 
+function scrollTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 // stast 
 function incrementStats() {
     const counters = document.querySelectorAll('.counter');
-
     counters.forEach((counter) => {
         counter.innerText = 0;
-
         const updateCounter = () => {
             const target = +counter.getAttribute('data-target');
             const c = +counter.innerText;
-
             const increment = target / 200;
             if (c < target) {
                 counter.innerText = Math.ceil(c + increment);
@@ -35,5 +40,8 @@ function incrementStats() {
         updateCounter();
     });
 }
-document.addEventListener('DOMContentLoaded', userScroll());
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', userScroll);
 document.addEventListener('DOMContentLoaded', incrementStats);
+document.querySelector('#to-top').addEventListener('click', scrollTop);
